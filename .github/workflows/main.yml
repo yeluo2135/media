@@ -18,11 +18,11 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
 
-      - name: Build demos/main Demo Debug
-        run: ./gradlew :demos:main:assembleDebug
+      - name: Build demo/main Demo Debug
+        run: ./gradlew :demo:main:assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: media3-demo-apk
-          path: demos/main/build/outputs/apk/debug/*.apk
+          path: demo/main/build/outputs/apk/debug/*.apk
